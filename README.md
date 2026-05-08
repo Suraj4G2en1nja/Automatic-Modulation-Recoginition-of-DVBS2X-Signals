@@ -3,7 +3,7 @@ AFR-Net + S-GBC for Robust Automatic Modulation Recognition (AMR)
 📌 Overview
 
 This project presents a Physics-Informed Hybrid Fusion Framework for Automatic Modulation Recognition (AMR) in DVB-S2X satellite communication systems.
-
+# demo video is provided
 The framework combines:
 
 AFR-Net (Adaptive Fusion-Residual Network)
