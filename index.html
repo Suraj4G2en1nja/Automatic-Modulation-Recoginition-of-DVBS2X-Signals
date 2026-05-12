@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMR DVB-S2X</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📡 Automatic Modulation Recognition</h1>
+
+    <label>SNR (-20 to 18 dB)</label><br>
+    <input type="range" id="snrInput" min="-20" max="18" step="1" value="2"
+           oninput="this.nextElementSibling.value = this.value">
+    <output>2</output>
+
+    <br><br>
+
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload & Predict</button>
+
+    <div id="result"></div>
+
+    <a id="downloadBtn" style="display:none;" href="/download">
+        Download CSV
+    </a>
+
+    <h3>📊 Feature Graphs</h3>
+    <canvas id="aChart"></canvas>
+    <canvas id="fChart"></canvas>
+    <canvas id="sChart"></canvas>
+
+    <button onclick="downloadGraphs()">📥 Download Graphs</button>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
